@@ -35,6 +35,12 @@ public class App {
         System.out.println(bookRepository.findBooksByAuthor("Italo Calvino"));
         System.out.println("Getting book by author 'Italo Calvino' and its date added, in 1987:");
         System.out.println(bookRepository.findBooksByAuthorAndDateAdded("Italo Calvino", time2));
+        System.out.println("====================================================");
+        System.out.println("Trying out the new custom query methods that I added");
+        System.out.println("====================================================");
+        System.out.println(bookRepository.findBookByTitle("Cosmicomics"));
+        System.out.println(bookRepository.findBooksByAvailable(false));
+        System.out.println(bookRepository.findBooksByDateAddedOrLastDateWithdrawn(time2, time2));
 
     }
 }
